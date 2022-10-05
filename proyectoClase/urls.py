@@ -22,5 +22,7 @@ urlpatterns = [
     path('fecha/', views.fecha),
     path('fecha-nacimiento/<int:edad>', views.calcular_fecha_nacimiento),
     path('mi-template/', views.mi_template),
+    path('mi-template/<str:nombre>', views.tu_template),
+    path('prueba-template/', views.prueba_template),
     path('admin/', admin.site.urls),
 ]
