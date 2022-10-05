@@ -21,8 +21,8 @@ def mi_template(request):
     
     cargar_archivo.close()
     
-    contexto = context()
+    contextocontexto = context()
     
-    template_renderizado = template.render(contexto)
+    template_renderizado = template.render(contextocontexto)
     
     return HttpResponse(template_renderizado)
