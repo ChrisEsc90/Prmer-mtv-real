@@ -3,6 +3,8 @@ from datetime import datetime
 from django.template import context, Template, loader
 import random
 
+from home.models import Persona
+
 def hola(request):
     return HttpResponse('Hola bebe!')
 
@@ -42,3 +44,15 @@ def prueba_template(request):
     template_renderizado = template.render(mi_contexto)
     
     return HttpResponse(template_renderizado)
+
+def crear_persona(request):
+    return HttpResponse('')
+
+def ver_personas(request):
+    
+    personas = Persona.objects.all()
+    
+    template = loader.get_template('ver_personas.html')
+    template_renderizado = template.render({'personas': personas})
+    
+    return HttpResponse('')
